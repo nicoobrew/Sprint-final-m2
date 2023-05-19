@@ -1,0 +1,22 @@
+#logoimg {
+    height: 100px;
+    width: 100px;
+}
+
+#inicio {
+    height: 500px;
+}
+
+#beneficios {
+    font-size: 16px;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: #10A2D9 !important;
+    color: white;
+    transition: background-color 0.8s ease-in-out;
+    transition: color ease-in-out;
+  }
+
+
