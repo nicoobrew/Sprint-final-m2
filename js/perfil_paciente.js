@@ -4,8 +4,20 @@ let elemLoginEmail = document.getElementById("login-email");
 let elemLoginPassword = document.getElementById("login-password");
 let elemForm = document.getElementsByTagName("form")[0];
 
+// Reemplaza caracteres en texto para que sea segura su inclusion en HTML
+function escape(texto) {
+    return texto.replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
 // Genera un perfil de usuario, retornando el elemento que lo representa
 function generarPerfil(email) {
+    // Escapar email por seguridad
+    email = escape(email);
+
     // Crear el elemento del perfil
     let elemPerfil = document.createElement("div");
     elemPerfil.id = "contenedor-perfil";
