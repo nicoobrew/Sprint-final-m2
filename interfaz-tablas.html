@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Historial</title>
+</head>
+<body>
+  <div class="container" style="display:grid">
+    <table>
+      <caption>Hemograma</caption>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Glóbulos Blancos</th>
+          <th>Glóbulos Rojos</th>
+          <th>Hemoglobina</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01/01/2020</td>
+          <td>6.5</td>
+          <td>5.2</td>
+          <td>14.3</td>
+        </tr>
+        <tr>
+          <td>03/06/2020</td>
+          <td>7.1</td>
+          <td>5.4</td>
+          <td>13.9</td>
+        </tr>
+        <tr>
+          <td>05/12/2020</td>
+          <td>6.9</td>
+          <td>5.0</td>
+          <td>13.6</td>
+        </tr>
+        <tr>
+          <td>07/11/2021</td>
+          <td>8.6</td>
+          <td>5.1</td>
+          <td>14.1</td>
+        </tr>
+        <tr>
+          <td>08/03/2023</td>
+          <td>7.3</td>
+          <td>4.9</td>
+          <td>14.4</td>
+        </tr>
+      </tbody>
+    </table>
+      <canvas id="line-chart1"></canvas>
+  </div>
+  <div class="container">
+    <table>
+      <caption>Perfil Lipídico</caption>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Colesterol Total</th>
+          <th>Triglicéridos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01/01/2020</td>
+          <td>231.5</td>
+          <td>153.2</td>
+        </tr>
+        <tr>
+          <td>03/06/2020</td>
+          <td>230.0</td>
+          <td>158.0</td>
+        </tr>
+        <tr>
+          <td>05/12/2020</td>
+          <td>290.1</td>
+          <td>178.4</td>
+        </tr>
+        <tr>
+          <td>07/11/2021</td>
+          <td>293.1</td>
+          <td>176.5</td>
+        </tr>
+        <tr>
+          <td>08/03/2023</td>
+          <td>220.1</td>
+          <td>157.9</td>
+        </tr>
+      </tbody>
+    </table>
+    <canvas id="line-chart2"></canvas>
+    <br>
+    <canvas id="bar-chart1"></canvas>
+    </div>
+    <div class="container">
+    <table>
+      <caption>Perfil Bioquímico Orina</caption>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Albumina</th>
+          <th>Glucosa</th>
+          <th>Sodio</th>
+          <th>Proteínas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01/01/2020</td>
+          <td>3.5</td>
+          <td>72</td>
+          <td>16</td>
+          <td>6.1</td>
+        </tr>
+        <tr>
+          <td>03/06/2020</td>
+          <td>3.4</td>
+          <td>70</td>
+          <td>25</td>
+          <td>6.1</td>
+        </tr>
+        <tr>
+          <td>05/12/2020</td>
+          <td>3.2</td>
+          <td>68</td>
+          <td>39</td>
+          <td>6.4</td>
+        </tr>
+        <tr>
+          <td>07/11/2021</td>
+          <td>3.8</td>
+          <td>81</td>
+          <td>120</td>
+          <td>7.2</td>
+        </tr>
+        <tr>
+          <td>08/03/2023</td>
+          <td>4.1</td>
+          <td>82</td>
+          <td>21</td>
+          <td>6.6</td>
+        </tr>
+      </tbody>
+    </table>
+    <canvas id="bar-chart2"></canvas>
+  </div>
+    
+  <script>
+    const labels = ['01/01/2020', '03/06/2020','05/12/2020','07/11/2021','08/03/2023']
+    const data1 = [6.5, 7.1, 6.9, 8.6, 7.3];
+    const data2 = [153.2, 158.0, 178.4, 176.5, 157.9];
+    const data3 = [231.5, 230.0, 290.1, 293.1, 220.1];
+    const data4 = [6.1, 6.1, 6.4, 7.2, 6.6]
+    
+// Configuración de los datos para los gráficos de línea
+
+const lineChartData1 = {
+  labels: labels,
+  datasets: [{
+    label: 'Histórico Glóbulos Blancos',
+    data: data1,
+    borderColor: 'lightpink',
+    fill: false
+  }]
+};
+
+const lineChartData2 = {
+  labels: labels,
+  datasets: [{
+    label: 'Histórico Trigliceridos',
+    data: data2,
+    borderColor: 'lightgreen',
+    fill: false
+  }]
+};
+
+// Configuración de los datos para los gráficos de barra
+const barChartData1 = {
+  labels: labels,
+  datasets: [{
+    label: 'Histórico Colesterol',
+    data: data3,
+    backgroundColor: 'gray'
+  }]
+};
+
+const barChartData2 = {
+  labels: labels,
+  datasets: [{
+    label: 'Histórico Proteínas Orina',
+    data: data4,
+    backgroundColor: 'lightblue'
+  }]
+};
+
+// Crear los gráficos de línea
+new Chart(document.getElementById('line-chart1'), {
+  type: 'line',
+  data: lineChartData1,
+  options: {}
+});
+
+new Chart(document.getElementById('line-chart2'), {
+  type: 'line',
+  data: lineChartData2,
+  options: {}
+});
+
+// Crear los gráficos de barra
+new Chart(document.getElementById('bar-chart1'), {
+  type: 'bar',
+  data: barChartData1,
+  options: {}
+});
+
+new Chart(document.getElementById('bar-chart2'), {
+  type: 'bar',
+  data: barChartData2,
+  options: {}
+});
+    </script>
+</body>
+</html>
