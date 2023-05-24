@@ -18,7 +18,6 @@ $(document).ready(function() {
           start: '2023-05-22',
           end: '2023-05-22'
         }
-        // Agrega más eventos aquí
       ]
     });
   });
