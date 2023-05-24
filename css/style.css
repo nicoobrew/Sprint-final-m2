@@ -19,4 +19,10 @@
     transition: color ease-in-out;
   }
 
+#imgjumbotron {
+    max-width: 100%;
+    height: auto;
+    background-image: url('https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+
+}
 
