@@ -25,6 +25,8 @@ function generarPerfil(email) {
 
     // Este es el contenido HTML del perfil
     elemPerfil.innerHTML = `
+
+    
     <div class="row justify-content-center align-items-center mt-5">
     <div class="col-sm-12 col-md-6 col-xl-4 d-flex justify-content-center">
         <!-- Credito imagen: Huaco Huapo 
