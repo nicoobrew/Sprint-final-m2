@@ -1,369 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Llamado por CDN a Bootstrap -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-            crossorigin="anonymous">
-        <!-- Llamado CDN a Charts.js -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"
-            integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://kit.fontawesome.com/aa5922055b.js"
-            crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="/Sprint-final-m2/css/style.css">
-        <link rel="shortcut icon" href="img/Diseño sin título.png"
-            type="image/x-icon">
-            <link rel="stylesheet" href="/css/style.css">
-        <title>Seguimiento Medico</title>
-    </head>
-    <body>
 
-        <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <img src="img/logotransparente.png"
-                        id="logoimg" alt srcset>
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse"
-                        id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="perfil_paciente.html">Pacientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="nuevos_usuarios.html">Nuevos Usuarios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="ver_usuarios.html">Usuarios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="convenios.html">Convenios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="interfaz-calendario.html">Calendario</a>
-                            </li>
-                            
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search"
-                                    placeholder="Search" aria-label="Buscar">
-                                <button class="btn btn-outline-success"
-                                    type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Llamado por CDN a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Llamado CDN a Charts.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"
+        integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/aa5922055b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Seguimiento Medico</title>
+</head>
 
-                <!-- Background image -->
-                <div class="p-5 text-center bg-image" style=" 
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="img/logotransparente.png" id="logoimg" alt="Logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="perfil_paciente.html">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="nuevos_usuarios.html">Nuevos
+                                Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ver_usuarios.html">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="convenios.html">Convenios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="interfaz-calendario.html">Calendario</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Background image -->
+        <div class="p-5 text-center bg-image"
+            style=" 
                 background-image: url('https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
-                    <div class="mask"
-                        style="background-color: rgba(0, 59, 252, 0.342);"> <div
-                            class="d-flex justify-content-center align-items-center"
-                            id="inicio">
-                            <div class="text-white">
-                                <h1 class="mb-3">Seguimiento Medico</h1>
-                                <h4 class="mb-3">de Pacientes</h4>
-                            </div>
-                        </div>
+            <div class="mask" style="background-color: rgba(0, 59, 252, 0.342);">
+                <div class="d-flex justify-content-center align-items-center" id="inicio">
+                    <div class="text-white">
+                        <h1 class="mb-3">Seguimiento Medico</h1>
+                        <h4 class="mb-3">de Pacientes</h4>
                     </div>
                 </div>
-                <!-- Background image -->
-            </header>
+            </div>
+        </div>
+        <!-- Background image -->
+    </header>
 
-            <!-- Cards con informacion sobre beneficios del sitio web -->
-            <div class="container mt-2" id="beneficios">
-                <div class="row">
-                    <div class="col-xl-4 col-md-12 col-xs-12">
-                        <div class="card" style="width: 24rem;">
-                            <div class="card-body">
+    <!-- Cards con informacion sobre beneficios del sitio web -->
+    <div class="container mt-2" id="beneficios">
+        <div class="row">
+            <div class="col-xl-4 col-md-12 col-xs-12">
+                <div class="card" style="width: 24rem;">
+                    <div class="card-body">
 
-                                <p class="card-text m-5">Centralización de datos
-                                    médicos, antecedentes, medicamentos y
-                                    resultados de exámenes</p>
+                        <p class="card-text m-5">Centralización de datos
+                            médicos, antecedentes, medicamentos y
+                            resultados de exámenes</p>
 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4">
-                        <div class="card" style="width: 24rem;">
-                            <div class="card-body">
-
-                                <p class="card-text m-5">Plataforma con acceso
-                                    desde cualquier
-                                    dispositivo con conexión a Internet</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="card" style="width: 24rem;">
-                            <div class="card-body">
-                                <p class="card-text m-5">Interfaz intuitiva y
-                                    fácil de usar para usuarios con o sin
-                                    experiencia
-                                    en salud </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container mt-5">
-                <!-- Imagen de llamado a la accion -->
-                <div class="row">
-                    <div class="col-xl-6">
-                        <img src="img/Registrate.svg"
-                            class="img-thumbnail" alt="...">
-                    </div>
+            <div class="col-xl-4">
+                <div class="card" style="width: 24rem;">
+                    <div class="card-body">
 
-                    <!-- Formulario de Registro -->
-                    <div class="col-xl-6">
-                        <form>
-                            <h4 class="m-4">Completa el siguiente formulario </h4>
-                            <!-- 2 column grid layout with text inputs for the first and last names -->
-                            <div class="row mb-4">
-                              <div class="col">
-                                <div class="form-outline">
-                                  <input type="text" id="form3Example1" class="form-control" />
-                                  <label class="form-label" for="form3Example1">Nombres</label>
-                                </div>
-                              </div>
-                              <div class="col">
-                                <div class="form-outline">
-                                  <input type="text" id="form3Example2" class="form-control" />
-                                  <label class="form-label" for="form3Example2">Apellidos/label>
-                                </div>
-                              </div>
-                            </div>
-                          
-                            <!-- Email input -->
-                            <div class="form-outline mb-4">
-                              <input type="email" id="form3Example3" class="form-control" />
-                              <label class="form-label" for="form3Example3">Correo Electronico</label>
-                            </div>
-                          
-                            <!-- Password input -->
-                            <div class="form-outline mb-4">
-                              <input type="password" id="form3Example4" class="form-control" />
-                              <label class="form-label" for="form3Example4">Contrasena</label>
-                            </div>
-                          
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
-                          
-                            
-                          </form>
+                        <p class="card-text m-5">Plataforma con acceso
+                            desde cualquier
+                            dispositivo con conexión a Internet</p>
+
                     </div>
                 </div>
             </div>
-
-                <!-- Seccion noticias -->
-                <div class="container mt-4">
-                    <div class="row">
-                        <h2 class="mb-4">Informate</h2>
-                        <div class="col-xl-3 col-md-6 col-sm-1">
-                            <div class="card" style="width: 18rem;">
-                                <img src="/img/img1.jpg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Noticia 1</h5>
-                                    <p class="card-text">Some quick example text
-                                        to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 col-sm-1">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/img2.jpg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Noticia 2</h5>
-                                    <p class="card-text">Some quick example text
-                                        to build on the card title and make up
-                                        the bulk of...</p>
-                                    <a href="#" class="btn btn-primary">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 col-sm-1">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/img3.jpg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Noticia 3</h5>
-                                    <p class="card-text">Some quick example text
-                                        to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-1">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/img4.jpg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Noticia 4</h5>
-                                    <p class="card-text">Some quick example text
-                                        to build on the card title and make up
-                                        the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Ver más</a>
-                                </div>
-                            </div>
-                        </div>
-
+            <div class="col-xl-4">
+                <div class="card" style="width: 24rem;">
+                    <div class="card-body">
+                        <p class="card-text m-5">Interfaz intuitiva y
+                            fácil de usar para usuarios con o sin
+                            experiencia
+                            en salud </p>
                     </div>
                 </div>
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-    <!-- Section: Social media -->
-    <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-
-        </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href class="me-4 text-reset">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class>
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div
-                    class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Seguimiento
-                        Medico Online
-                    </h6>
-                    <p>
-                        Here you can use rows and columns to
-                        organize your footer content. Lorem
-                        ipsum
-                        dolor sit amet, consectetur adipisicing
-                        elit.
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                
-
-                <!-- Grid column -->
-                <div
-                    class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Links de Interes
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Inicio</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Calendario</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Pacientes</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Convenios</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div
-                    class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-                    <p><i class="fas fa-home me-3"></i> Estado 336,
-                        Curico - Chile</p>
-                    <p>
-                        <i class="fas fa-envelope me-3"></i>
-                        info@smonline.cl
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i> + 56 9 5632
-                        1458</p>
-
-                </div>
-                <!-- Grid column -->
             </div>
-            <!-- Grid row -->
         </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div class="text-center p-4"
-        style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2023 Copyright:
-        <a class="text-reset fw-bold"
-            href="index.html">Grupo Sala 5</a>
     </div>
-    <!-- Copyright -->
-</footer>
-<!-- Footer -->
 
-                <script
-                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-                    crossorigin="anonymous"></script>
-                <script src="/js/script.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container mt-5">
+        <!-- Imagen de llamado a la accion -->
+        <div class="row">
+            <div class="col-xl-6">
+                <img src="img/Registrate.svg" class="img-thumbnail" alt="...">
+            </div>
 
-            </body>
-        </html>
+            <!-- Formulario de Registro -->
+            <div class="col-xl-6">
+                <form>
+                    <h4 class="m-4">Completa el siguiente formulario </h4>
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form3Example1" class="form-control">
+                                <label class="form-label" for="form3Example1">Nombres</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form3Example2" class="form-control">
+                                <label class="form-label" for="form3Example2">Apellidos</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="form3Example3" class="form-control">
+                        <label class="form-label" for="form3Example3">Correo Electronico</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" id="form3Example4" class="form-control">
+                        <label class="form-label" for="form3Example4">Contrasena</label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seccion noticias -->
+    <div class="container mt-4">
+        <div class="row">
+            <h2 class="mb-4">Informate</h2>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Noticia 1</h5>
+                        <p class="card-text">Some quick example text
+                            to build on the card title and make up
+                            the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/img2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Noticia 2</h5>
+                        <p class="card-text">Some quick example text
+                            to build on the card title and make up
+                            the bulk of...</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/img3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Noticia 3</h5>
+                        <p class="card-text">Some quick example text
+                            to build on the card title and make up
+                            the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/img4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Noticia 4</h5>
+                        <p class="card-text">Some quick example text
+                            to build on the card title and make up
+                            the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <div class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </div>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class>
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Seguimiento
+                            Medico Online
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to
+                            organize your footer content. Lorem
+                            ipsum
+                            dolor sit amet, consectetur adipisicing
+                            elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Links de Interes
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Inicio</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Calendario</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Pacientes</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Convenios</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                        <p><i class="fas fa-home me-3"></i> Estado 336,
+                            Curico - Chile</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@smonline.cl
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 56 9 5632
+                            1458</p>
+
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="index.html">Grupo Sala 5</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>
