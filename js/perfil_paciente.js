@@ -2,7 +2,7 @@
 let elemLogin = document.getElementById("contenedor-login");
 let elemLoginEmail = document.getElementById("login-email");
 let elemLoginPassword = document.getElementById("login-password");
-let elemForm = document.getElementsByTagName("form")[0];
+let elemForm = document.getElementById("form-login");
 
 // Reemplaza caracteres en texto para que sea segura su inclusion en HTML
 function escape(texto) {
@@ -24,9 +24,7 @@ function generarPerfil(email) {
     elemPerfil.className = "container";
 
     // Este es el contenido HTML del perfil
-    elemPerfil.innerHTML = `
-
-    
+    elemPerfil.innerHTML = `    
     <div class="row justify-content-center align-items-center mt-5">
     <div class="col-sm-12 col-md-6 col-xl-4 d-flex justify-content-center">
         <!-- Credito imagen: Huaco Huapo 
@@ -85,7 +83,7 @@ elemForm.addEventListener("submit", function (event) {
         elemLogin.remove();
 
         // Mostrar el perfil
-        let elemBody = document.body;
-        elemBody.insertBefore(generarPerfil(email), elemBody.firstChild);
+        let elemFooter = document.getElementsByTagName("footer")[0];
+        document.body.insertBefore(generarPerfil(email), elemFooter);
     }
 });
